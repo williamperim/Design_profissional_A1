@@ -1,0 +1,2890 @@
+Delivered-To: willianjosueh@gmail.com
+Received: by 2002:ac4:cd50:0:b0:735:abd:503f with SMTP id y16csp693749pin;
+        Mon, 25 Aug 2025 15:02:51 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHBiRIzV7kU3iOXiRIqJIxKFIyUK2aMcZqCzJQJ33I6VqeGT28j8nDw76aU8XQFxcICKDgy
+X-Received: by 2002:a05:6214:5013:b0:709:96d2:3215 with SMTP id 6a1803df08f44-70d96d1ddd6mr135109386d6.0.1756159370698;
+        Mon, 25 Aug 2025 15:02:50 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1756159370; cv=none;
+        d=google.com; s=arc-20240605;
+        b=i+uFRgY0vGERpElQjphYvxTJX+Edwh6bIBdkIXRlS9fX4ybX8GUNz6UQsHyu/eDyIv
+         E9CKNYCdNEACnUI2qq4rzq5c76FICoLePPitge9ateAPLfsMa9GErNGpqUpprJcnAWo1
+         PuO5W3PqMtuf2ui24GCt6ldBiMgo54c9lpjDu7HrzM2gFvNNDaDiCNW5Z0eST36HQNSB
+         p8uPgo16OJB1npdfusrCYa+N2eZj7eR2C2nKQWdgCDLmw2DLGvvHXOPTWiKK/moUnHyZ
+         MF4Is8bgw8X0OsnVpfLodi0ZSAJBtzwclpANZmZvByNYE6m+3wEADlgwWPSDr11/Z34f
+         QJfA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:list-unsubscribe-post:list-unsubscribe:date:message-id
+         :mime-version:subject:to:reply-to:from:dkim-signature:dkim-signature;
+        bh=AADkRVt8EzVLgDNieod5vaBl7ECDJJ+2YKEuDbIZmk8=;
+        fh=koLgIeMmKdUNL9LzrNra15DD6+/bdRO8cgk2Ah5BUqA=;
+        b=QE4rm/qK+3SV0CpjtsQ827Ga9cO7+Zki4JqCiJ0OpXOZF9EL2qJFOJwN9CV8W02+10
+         FsJUXINZIcvSgLXP2C2XaZtzEPak8aR5aB4B4AyGtgbWbT5c3iTRtO0WoShAKNZJcFJ6
+         VO3FCo2V5Q9EKkXY9lZMWcJcJifB3FG/DJBa95f3C4ZaT8A+A3vn1XiufaYQEhEuo3eO
+         7q9ypWj7847NY4HzTkvM+G3mD7YkJLAyJpK5mPbM6ClNG1H1bPisLpwSJsgS9zJVHa2W
+         BLeClXrBSNBsd2hnRX7PMcNwsHRkkTwrrP1xV8QtRbXK7h4KDOT7rnqWkYS/P9Q6kRtY
+         Vk6Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@platform.even3.com header.s=agxzwqcfr3htjthnvnljx53tygdooirj header.b=YxWM++cK;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b="d/BWAhTJ";
+       spf=pass (google.com: domain of 01000198e3416386-258dde4c-1d34-49e8-99ef-f970d9e1c81f-000000@mail.platform.even3.com designates 54.240.34.120 as permitted sender) smtp.mailfrom=01000198e3416386-258dde4c-1d34-49e8-99ef-f970d9e1c81f-000000@mail.platform.even3.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=platform.even3.com
+Return-Path: <01000198e3416386-258dde4c-1d34-49e8-99ef-f970d9e1c81f-000000@mail.platform.even3.com>
+Received: from a34-120.smtp-out.amazonses.com (a34-120.smtp-out.amazonses.com. [54.240.34.120])
+        by mx.google.com with ESMTPS id 6a1803df08f44-70da737eb85si27637816d6.1107.2025.08.25.15.02.50
+        for <willianjosueh@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 25 Aug 2025 15:02:50 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 01000198e3416386-258dde4c-1d34-49e8-99ef-f970d9e1c81f-000000@mail.platform.even3.com designates 54.240.34.120 as permitted sender) client-ip=54.240.34.120;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@platform.even3.com header.s=agxzwqcfr3htjthnvnljx53tygdooirj header.b=YxWM++cK;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b="d/BWAhTJ";
+       spf=pass (google.com: domain of 01000198e3416386-258dde4c-1d34-49e8-99ef-f970d9e1c81f-000000@mail.platform.even3.com designates 54.240.34.120 as permitted sender) smtp.mailfrom=01000198e3416386-258dde4c-1d34-49e8-99ef-f970d9e1c81f-000000@mail.platform.even3.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=platform.even3.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=agxzwqcfr3htjthnvnljx53tygdooirj; d=platform.even3.com;
+	t=1756159370;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date:List-Unsubscribe:List-Unsubscribe-Post;
+	bh=1mGfzXvGEbAQPc+sfmqWUD01FFFDU9syl7IZJaAL1d0=;
+	b=YxWM++cK9aHebaM+RDJa4VXS9KACaEsB2xLDedTAGre+VCWQxdKu48qM7T9sLWAV
+	XEMY9JVdAd9rr6dmXJ8wGzO2+2e3CthNm+TTNcVDdXWCefhdKMt5zIop7KuQqr9kpNl
+	yx23u3XIEHBqS9Xtp7aaghAjevyU75qfClQO+d17FMEXwSXuSJPFnYKxiB4d4SyF89a
+	U7EE422/FR0/KaP+5h6vDtlADuQKpqyNJHVuIZauVYoWY7UgMhGCmeuhVmwesV8GjGN
+	TQhu038w46bddmZSdyli870zwec4hlR/yMK6crb7sYmGtpu8+NIqQrRqFBzvzW3FzLt
+	1SnpL53hIA==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1756159370;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date:List-Unsubscribe:List-Unsubscribe-Post:Feedback-ID;
+	bh=1mGfzXvGEbAQPc+sfmqWUD01FFFDU9syl7IZJaAL1d0=;
+	b=d/BWAhTJNVZgZ/N4RiKst+ue9h6JSOdv/inV1CCT66/a+fmakiHdoNIGEkjsN5yz
+	FSXosYIzmx2fqEItnCHxRQM7nYYOEJJ+GNlVV6T2UtlTktpm84kdgVVMrlJC9W2xU/W
+	14WS9hAf2eyZXyNlXTqseg8KHrJG7rGWPn9vPDos=
+From: =?utf-8?B?RXZlbjM=?= <hello@platform.even3.com>
+Reply-To: hello@platform.even3.com
+To: willianjosueh@gmail.com
+Subject: =?UTF-8?Q?Confirma=C3=A7=C3=A3o_de_Inscri=C3=A7=C3=A3o_para_S?=
+ =?UTF-8?Q?imp=C3=B3sio_Internacional_de_Educa=C3=A7=C3=A3?=
+ =?UTF-8?Q?o_do_Ensino_Superior:_Intelig=C3=AAn?=
+ =?UTF-8?Q?cia_artificial_e_ensino_superior?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_131873_853926935.1756159370118"
+Message-ID: <01000198e3416386-258dde4c-1d34-49e8-99ef-f970d9e1c81f-000000@email.amazonses.com>
+Date: Mon, 25 Aug 2025 22:02:50 +0000
+List-Unsubscribe: <mailto:unsubscribe-01000198e3416386-258dde4c-1d34-49e8-99ef-f970d9e1c81f-000000@amazonses.com?subject=https://o.us-east-1.user-subscription.com/oc/38adeb23-51ca-4f3f-bf6d-bd422b9e2273/987fdbd4-df0a-4f9a-ab17-1ee1e8643daf/01000198e3416386-258dde4c-1d34-49e8-99ef-f970d9e1c81f-000000%3Ft%3Dc2814329-9e56-4391-acaa-5515932b0318>, <https://o.us-east-1.user-subscription.com/oc/38adeb23-51ca-4f3f-bf6d-bd422b9e2273/987fdbd4-df0a-4f9a-ab17-1ee1e8643daf/01000198e3416386-258dde4c-1d34-49e8-99ef-f970d9e1c81f-000000?t=c2814329-9e56-4391-acaa-5515932b0318>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: ::1.us-east-1.iq8q6Yxm9zRkpanCDD/b4WzJo+zWxoCkvZNX9XrlpCg=:AmazonSES
+X-SES-Outgoing: 2025.08.25-54.240.34.120
+
+------=_Part_131873_853926935.1756159370118
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+
+
+
+
+
+
+ =20
+
+ =20
+
+ =20
+
+ =20
+
+    body, p {
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Roboto, =
+"Helvetica Neue", Helvetica, Tahoma, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: none;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: 0;
+      padding: 0;
+    }
+
+    img {
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      width: 600px;
+    }
+
+    .no_text_resize {
+      -moz-text-size-adjust: none;
+      -webkit-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+      text-size-adjust: none;
+    }
+    /* Media Queries */
+    @media all and (max-width: 600px) {
+      table[class=3D"content"] {
+        width: 100% !important;
+      }
+
+      tr[class=3D"grid-no-gutter"] td[class=3D"grid__col"] {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      td[class=3D"grid__col"] {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+
+      tr[class=3D"small_full_width"] td[class=3D"grid__col"] {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+      }
+
+      table[class=3D"small_full_width"] {
+        width: 100% !important;
+        padding-bottom: 10px;
+      }
+
+      a[class=3D"header-link"] {
+        margin-right: 0 !important;
+        margin-left: 10px !important;
+      }
+
+      a[class=3D"btn"] {
+        width: 100%;
+        border-left-width: 0px !important;
+        border-right-width: 0px !important;
+      }
+
+      table[class=3D"col-layout"] {
+        width: 100% !important;
+      }
+
+      td[class=3D"col-container"] {
+        display: block !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      td[class=3D"col-nav-items"] {
+        display: inline-block !important;
+        padding-left: 0 !important;
+        padding-right: 10px !important;
+        background: none !important;
+      }
+
+      img[class=3D"col-img"] {
+        height: auto !important;
+        max-width: 520px !important;
+        width: 100% !important;
+      }
+
+      td[class=3D"col-center-sm"] {
+        text-align: center;
+      }
+
+      tr[class=3D"footer-attendee-cta"] > td[class=3D"grid__col"] {
+        padding: 24px 0 0 !important;
+      }
+
+      td[class=3D"col-footer-cta"] {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      td[class=3D"footer-links"] {
+        text-align: left !important;
+      }
+
+      .hide-for-small {
+        display: none !important;
+      }
+
+      .ribbon-mobile {
+        line-height: 1.3 !important;
+      }
+
+      .small_full_width {
+        width: 100% !important;
+        padding-bottom: 10px;
+      }
+
+      .table__ridge {
+        height: 7px !important;
+      }
+
+        .table__ridge img {
+          display: none !important;
+        }
+
+      .table__ridge--top {
+        background-image: url(https://static.even3.com/assets/email/lista-c=
+ima.jpg) !important;
+        background-size: 170% 7px;
+      }
+
+      .table__ridge--bottom {
+        background-image: url(https://static.even3.com/assets/email/listra-=
+baixo.jpg) !important;
+        background-size: 170% 7px;
+      }
+
+      .summary-table__total {
+        padding-right: 10px !important;
+      }
+
+      .app-cta {
+        display: none !important;
+      }
+
+      .app-cta__mobile {
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        float: none !important;
+        display: block !important;
+        margin-top: 12px !important;
+        visibility: visible;
+        font-size: inherit !important;
+      }
+      /* List Event Cards */
+      .list-card__header {
+        width: 130px !important;
+      }
+
+      .list-card__label {
+        width: 130px !important;
+      }
+
+      .list-card__image-wrapper {
+        width: 130px !important;
+        height: 65px !important;
+      }
+
+      .list-card__image {
+        max-width: 130px !important;
+        max-height: 65px !important;
+      }
+
+      .list-card__body {
+        padding-left: 10px !important;
+      }
+
+      .list-card__title {
+        margin-bottom: 10px !important;
+      }
+
+      .list-card__date {
+        padding-top: 0 !important;
+      }
+    }
+
+    @media all and (device-width: 768px) and (device-height: 1024px) and (o=
+rientation:landscape) {
+      .ribbon-mobile {
+        line-height: 1.3 !important;
+      }
+
+      .ribbon-mobile__text {
+        padding: 0 !important;
+      }
+    }
+
+    @media all and (device-width: 768px) and (device-height: 1024px) and (o=
+rientation:portrait) {
+      .ribbon-mobile {
+        line-height: 1.3 !important;
+      }
+
+      .ribbon-mobile__text {
+        padding: 0 !important;
+      }
+    }
+
+    @media screen and (min-device-height:480px) and (max-device-height:568p=
+x), (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-=
+min-device-pixel-ratio : 2), (min-device-width : 414px) and (max-device-wid=
+th : 736px) and (-webkit-min-device-pixel-ratio : 3) {
+      .hide_for_iphone {
+        display: none !important;
+      }
+
+      .passbook {
+        width: auto !important;
+        height: auto !important;
+        line-height: auto !important;
+        visibility: visible !important;
+        display: block !important;
+        max-height: none !important;
+        overflow: visible !important;
+        float: none !important;
+        text-indent: 0 !important;
+        font-size: inherit !important;
+      }
+    }
+ =20
+
+
+
+
+
+ =20
+
+   =20
+
+     =20
+
+       =20
+
+         =20
+
+           =20
+
+
+               =20
+
+                 =20
+
+               =20
+
+
+           =20
+
+           =20
+
+             =20
+
+               =20
+Procurar eventos
+
+                 =20
+Minhas inscri=C3=A7=C3=B5es
+
+                 =20
+
+               =20
+
+             =20
+
+           =20
+
+         =20
+
+       =20
+
+       =20
+
+         =20
+
+           =20
+
+             =20
+
+               =20
+
+                 =20
+
+                   =20
+
+                     =20
+
+                       =20
+
+                          @media (max-device-width: 640px) {
+                            .organized_by {
+                              font-size: 14px !important;
+                            }
+
+                            .ticket-section__or {
+                              padding: 12px 0 14px 0 !important;
+                            }
+
+                            .your-account__logo {
+                              margin-top: 8px;
+                            }
+                          }
+
+                          @media screen and (min-device-height:480px) and (=
+max-device-height:568px) {
+                            h2 {
+                              font-weight: 600 !important;
+                            }
+
+                            .header_defer {
+                              font-size: 12px;
+                            }
+                          }
+                       =20
+
+                     =20
+
+                   =20
+
+                   =20
+
+                     =20
+
+                       =20
+
+                          Ol=C3=A1! Aqui est=C3=A1 a confirma=C3=A7=C3=A3o =
+de inscri=C3=A7=C3=A3o
+                         =20
+
+                         =20
+Simp=C3=B3sio Internacional de Educa=C3=A7=C3=A3o do Ensino Superior: Intel=
+ig=C3=AAncia artificial e ensino superior
+
+                       =20
+
+                     =20
+
+                   =20
+
+                   =20
+                   =20
+
+                     =20
+
+                       =20
+
+                         =20
+
+                           =20
+
+                              =C2=A0
+                           =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+                   =20
+
+
+                   =20
+                     =20
+
+                       =20
+
+                         =20
+
+                           =20
+
+                               =20
+
+                                 =20
+
+                               =20
+
+                             =20
+
+                               =20
+William Josu=C3=A9 Da Silva Perim
+
+                               =20
+
+                                Inscri=C3=A7=C3=A3o n=C2=BA 63195131
+                               =20
+
+                                Categoria Estudante
+                               =20
+
+
+                               =20
+
+                                 =20
+
+                                    Comprovante
+                                 =20
+
+                               =20
+
+                                =C2=A0 =C2=A0
+                                 =20
+
+                                   =20
+
+                                      Salvar no smartphone
+                                   =20
+
+                                 =20
+
+
+
+                             =20
+
+                           =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+                     =20
+
+                       =20
+
+                         =20
+
+                           =20
+
+                             =20
+
+                                =C2=A0
+                             =20
+
+                           =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+                                                             =20
+
+                       =20
+
+                         =20
+                         =20
+
+                           =20
+
+                             =20
+
+                                 =20
+
+                                   =20
+Ol=C3=A1!
+Bem vindo ao futuro da educa=C3=A7=C3=A3o superior.
+Obrigado por se inscrever no
+ III Simp=C3=B3sio Internacional de Educa=C3=A7=C3=A3o do Ensino Superior=
+=20
+(SIEES): Intelig=C3=AAncia Artificial e Ensino Superior.
+Desejamos um excelente evento!
+Realiza=C3=A7=C3=A3o: Instituto Sumar=C3=A9
+
+                                 =20
+
+                                                             =20
+
+                           =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+                     =20
+
+                       =20
+
+                         =20
+
+                           =20
+
+                             =20
+
+                               =20
+
+                                  =C2=A0
+                               =20
+
+                             =20
+
+                           =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+                                         =20
+
+                       =20
+
+                         =20
+
+                            Transmiss=C3=A3o online
+                         =20
+
+                         =20
+
+                           =20
+
+                             =20
+
+                               =20
+
+                                  Acesse seu evento online clicando no bot=
+=C3=A3o abaixo.=20
+
+                                  Este =C3=A9 seu link =C3=BAnico e exclusi=
+vo de acesso ao evento.
+
+                               =20
+
+                             =20
+
+                           =20
+
+                         =20
+
+                         =20
+
+                           =20
+
+                             =20
+
+                               =20
+
+                                 =20
+
+                                    Acesse agora
+                                 =20
+
+                               =20
+
+                             =20
+
+                           =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+                     =20
+
+                       =20
+
+                         =20
+
+                           =20
+
+                             =20
+
+                                =C2=A0
+                             =20
+
+                           =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+                                         =20
+
+                       =20
+
+                         =20
+
+Atividades & Submiss=C3=B5es
+                         =20
+
+                         =20
+
+                           =20
+
+                             =20
+
+                               =20
+
+Para se cadastrar nas atividades do evento e realizar submiss=C3=A3o, acess=
+e a sua conta.                               =20
+
+                             =20
+
+                           =20
+
+                         =20
+
+                         =20
+
+                           =20
+
+                             =20
+
+                               =20
+
+                                 =20
+
+Acesse agora                                 =20
+
+                               =20
+
+                             =20
+
+                           =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+                     =20
+
+                       =20
+
+                         =20
+
+                           =20
+
+                             =20
+
+                                =C2=A0
+                             =20
+
+                           =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+                                         =20
+
+                       =20
+
+                         =20
+
+                            D=C3=BAvidas sobre este evento?
+                         =20
+
+                         =20
+
+                           =20
+
+                             =20
+
+                               =20
+
+                                 =20
+Entrar em contato com o organizador
+
+                             =20
+
+                           =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+                   =20
+
+                                         =20
+
+                       =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+                     =20
+
+                       =20
+
+                         =20
+
+                           =20
+
+                             =20
+
+                               =20
+
+                                  Resumo
+                               =20
+
+                             =20
+
+                             =20
+
+                               =20
+
+                                  segunda-feira, 25 de agosto de 2025
+                               =20
+
+                             =20
+
+                           =20
+
+                           =20
+
+                             =20
+
+                               =20
+
+                                 =20
+
+                                   =20
+
+                                     =20
+
+                                       =20
+
+                                          Item
+                                       =20
+
+                                     =20
+
+                                     =20
+
+                                       =20
+
+                                          Quantidade
+                                       =20
+
+                                     =20
+
+                                   =20
+
+                                 =20
+
+                                 =20
+
+                                     =20
+
+                                       =20
+
+
+                                         =20
+
+                                            Estudante
+                                         =20
+
+                                       =20
+
+                                       =20
+
+                                         =20
+
+                                            1
+                                         =20
+
+                                       =20
+
+                                     =20
+
+                                                                     =20
+
+                               =20
+
+                             =20
+
+                           =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+                     =20
+
+                       =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+                   =20
+                   =20
+
+                     =20
+
+                       =20
+
+                         =20
+
+                           =20
+
+                             =20
+
+                                Sobre este evento
+                             =20
+
+                             =20
+
+                               =20
+
+                                 =20
+
+                                   =20
+
+                                 =20
+
+                                 =20
+
+                                   =20
+
+                                      segunda-feira, 25 de agosto de 2025
+
+                                       =20
+at=C3=A9
+
+                                       =20
+
+                                       =20
+sexta-feira, 29 de agosto de 2025
+
+
+                                       =20
+
+                                       =20
+19:00 - 22:00
+
+                                     =20
+
+                                   =20
+
+                                 =20
+
+                               =20
+
+
+                                 =20
+
+                                   =20
+
+                                     =20
+
+                                   =20
+
+                                   =20
+
+                                     =20
+
+                                       =20
+
+                                          Bras=C3=ADlia
+                                       =20
+
+                                     =20
+
+                                   =20
+
+                                 =20
+
+
+
+                               =20
+
+                                 =20
+
+                                   =20
+
+                                 =20
+
+                                 =20
+
+                                   =20
+
+                                      Adicionar ao calend=C3=A1rio:
+                                   =20
+
+                                   =20
+
+                                     =20
+Google
+
+                                     =20
+=C2=B7
+
+                                     =20
+Outlook
+
+                                     =20
+=C2=B7
+
+                                     =20
+iCal
+
+                                     =20
+=C2=B7
+
+                                     =20
+Yahoo
+
+                                   =20
+
+                                 =20
+
+                               =20
+
+                             =20
+
+                           =20
+
+                         =20
+
+                       =20
+
+                       =20
+                     =20
+
+                   =20
+
+
+                   =20
+                     =20
+
+                       =20
+
+
+                         =20
+
+                           =20
+
+                             =20
+
+                                =C2=A0
+                             =20
+
+                           =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+                     =20
+
+                       =20
+
+                         =20
+
+                           =20
+
+                             =20
+
+                               =20
+
+                                 =20
+
+                               =20
+
+                             =20
+
+                           =20
+
+                         =20
+
+                         =20
+
+                           =20
+
+                             =20
+
+                               =20
+
+                                  Crie uma conta
+                               =20
+
+                               =20
+
+Com uma conta =C3=A9 poss=C3=ADvel ter acesso ao seu hist=C3=B3rico de pedi=
+dos, comprovantes, certificados e mais.=20
+Crie agora
+ sua conta
+.
+
+                                  Caso desejar, voc=C3=AA pode=20
+cancelar sua inscri=C3=A7=C3=A3o
+ a qualquer momento
+.
+
+                               =20
+
+                             =20
+
+                           =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+               =20
+
+             =20
+
+           =20
+
+         =20
+
+       =20
+
+       =20
+
+         =20
+
+           =20
+
+             =20
+
+               =20
+
+                 =20
+
+                   =20
+
+                     =20
+
+                       =20
+
+                         =20
+
+                           =20
+
+                             =20
+
+                               =20
+
+                                 =20
+
+                                   =20
+
+                                 =20
+
+                               =20
+
+                             =20
+
+                           =20
+
+                         =20
+
+                       =20
+
+                       =20
+
+                         =20
+
+                       =20
+
+                       =20
+
+                         =20
+
+                           =20
+
+                             =20
+
+                           =20
+
+                         =20
+
+                       =20
+
+                     =20
+
+                   =20
+
+                 =20
+
+               =20
+
+             =20
+
+           =20
+
+         =20
+
+         =20
+
+           =20
+
+             =20
+
+               =20
+
+                 =20
+
+                    =C2=A0
+                 =20
+
+               =20
+
+             =20
+
+           =20
+
+         =20
+
+         =20
+
+           =20
+
+             =20
+
+                Esse e-mail foi enviado para=20
+willianjosueh@gmail.com
+. Voc=C3=AA recebeu esse e-mail pois est=C3=A1 cadastrado na plataforma de =
+eventos Even3.
+                Voc=C3=AA pode=20
+cancelar a inscri=C3=A7=C3=A3o
+ a qualquer momento.
+             =20
+
+             =20
+Pol=C3=ADtica de privacidade
+
+             =20
+|
+
+             =20
+Termos de uso
+
+             =20
+|
+
+             =20
+Suporte
+
+           =20
+
+         =20
+
+         =20
+           =20
+
+             =20
+
+               =20
+Even3 - L3 Solu=C3=A7=C3=B5es em tecnologia Ltda.
+ Rua do Brum, n=C2=BA 248, CXPST 020, Recife, Recife-PE, CEP: 50.030-260
+
+             =20
+
+           =20
+
+         =20
+       =20
+
+       =20
+
+
+       =20
+
+         =20
+
+         =20
+
+         =20
+
+           =20
+
+         =20
+
+         =20
+
+           =20
+
+           =20
+
+             =20
+
+             =20
+
+           =20
+
+           =20
+
+           =20
+
+             =20
+
+             =20
+
+               =20
+
+               =20
+
+               =20
+
+               =20
+
+             =20
+
+           =20
+
+         =20
+
+         =20
+
+         =20
+
+       =20
+
+
+     =20
+
+   =20
+
+------=_Part_131873_853926935.1756159370118
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+<!doctype html>
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width">
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8" =
+/>
+  <meta name=3D"format-detection" content=3D"telephone=3Dno">
+  <style>
+    body, p {
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, Roboto, =
+"Helvetica Neue", Helvetica, Tahoma, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: none;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: 0;
+      padding: 0;
+    }
+
+    img {
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      width: 600px;
+    }
+
+    .no_text_resize {
+      -moz-text-size-adjust: none;
+      -webkit-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+      text-size-adjust: none;
+    }
+    /* Media Queries */
+    @media all and (max-width: 600px) {
+      table[class=3D"content"] {
+        width: 100% !important;
+      }
+
+      tr[class=3D"grid-no-gutter"] td[class=3D"grid__col"] {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      td[class=3D"grid__col"] {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+
+      tr[class=3D"small_full_width"] td[class=3D"grid__col"] {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+      }
+
+      table[class=3D"small_full_width"] {
+        width: 100% !important;
+        padding-bottom: 10px;
+      }
+
+      a[class=3D"header-link"] {
+        margin-right: 0 !important;
+        margin-left: 10px !important;
+      }
+
+      a[class=3D"btn"] {
+        width: 100%;
+        border-left-width: 0px !important;
+        border-right-width: 0px !important;
+      }
+
+      table[class=3D"col-layout"] {
+        width: 100% !important;
+      }
+
+      td[class=3D"col-container"] {
+        display: block !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      td[class=3D"col-nav-items"] {
+        display: inline-block !important;
+        padding-left: 0 !important;
+        padding-right: 10px !important;
+        background: none !important;
+      }
+
+      img[class=3D"col-img"] {
+        height: auto !important;
+        max-width: 520px !important;
+        width: 100% !important;
+      }
+
+      td[class=3D"col-center-sm"] {
+        text-align: center;
+      }
+
+      tr[class=3D"footer-attendee-cta"] > td[class=3D"grid__col"] {
+        padding: 24px 0 0 !important;
+      }
+
+      td[class=3D"col-footer-cta"] {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      td[class=3D"footer-links"] {
+        text-align: left !important;
+      }
+
+      .hide-for-small {
+        display: none !important;
+      }
+
+      .ribbon-mobile {
+        line-height: 1.3 !important;
+      }
+
+      .small_full_width {
+        width: 100% !important;
+        padding-bottom: 10px;
+      }
+
+      .table__ridge {
+        height: 7px !important;
+      }
+
+        .table__ridge img {
+          display: none !important;
+        }
+
+      .table__ridge--top {
+        background-image: url(https://static.even3.com/assets/email/lista-c=
+ima.jpg) !important;
+        background-size: 170% 7px;
+      }
+
+      .table__ridge--bottom {
+        background-image: url(https://static.even3.com/assets/email/listra-=
+baixo.jpg) !important;
+        background-size: 170% 7px;
+      }
+
+      .summary-table__total {
+        padding-right: 10px !important;
+      }
+
+      .app-cta {
+        display: none !important;
+      }
+
+      .app-cta__mobile {
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        float: none !important;
+        display: block !important;
+        margin-top: 12px !important;
+        visibility: visible;
+        font-size: inherit !important;
+      }
+      /* List Event Cards */
+      .list-card__header {
+        width: 130px !important;
+      }
+
+      .list-card__label {
+        width: 130px !important;
+      }
+
+      .list-card__image-wrapper {
+        width: 130px !important;
+        height: 65px !important;
+      }
+
+      .list-card__image {
+        max-width: 130px !important;
+        max-height: 65px !important;
+      }
+
+      .list-card__body {
+        padding-left: 10px !important;
+      }
+
+      .list-card__title {
+        margin-bottom: 10px !important;
+      }
+
+      .list-card__date {
+        padding-top: 0 !important;
+      }
+    }
+
+    @media all and (device-width: 768px) and (device-height: 1024px) and (o=
+rientation:landscape) {
+      .ribbon-mobile {
+        line-height: 1.3 !important;
+      }
+
+      .ribbon-mobile__text {
+        padding: 0 !important;
+      }
+    }
+
+    @media all and (device-width: 768px) and (device-height: 1024px) and (o=
+rientation:portrait) {
+      .ribbon-mobile {
+        line-height: 1.3 !important;
+      }
+
+      .ribbon-mobile__text {
+        padding: 0 !important;
+      }
+    }
+
+    @media screen and (min-device-height:480px) and (max-device-height:568p=
+x), (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-=
+min-device-pixel-ratio : 2), (min-device-width : 414px) and (max-device-wid=
+th : 736px) and (-webkit-min-device-pixel-ratio : 3) {
+      .hide_for_iphone {
+        display: none !important;
+      }
+
+      .passbook {
+        width: auto !important;
+        height: auto !important;
+        line-height: auto !important;
+        visibility: visible !important;
+        display: block !important;
+        max-height: none !important;
+        overflow: visible !important;
+        float: none !important;
+        text-indent: 0 !important;
+        font-size: inherit !important;
+      }
+    }
+  </style>
+</head>
+<body border=3D"0"
+      cellpadding=3D"0"
+      cellspacing=3D"0"
+      height=3D"100%"
+      width=3D"100%"
+      bgcolor=3D"#F7F7F7"
+      style=3D"margin: 0;">
+  <table border=3D"0"
+         cellpadding=3D"0"
+         cellspacing=3D"0"
+         height=3D"100%"
+         width=3D"100%"
+         bgcolor=3D"#F7F7F7">
+    <tr>
+      <td style=3D"padding-right: 10px; padding-left: 10px;">
+        <table class=3D"content"
+               align=3D"center"
+               cellpadding=3D"0"
+               cellspacing=3D"0"
+               border=3D"0"
+               bgcolor=3D"#F7F7F7"
+               style=3D"width: 600px; max-width: 600px;">
+          <tr>
+            <td width=3D"33%"
+                valign=3D"middle"
+                style=3D"text-align:left; padding:30px 0 20px 0;">
+
+                <a href=3D"http://www.even3.com.br">
+                  <img src=3D"https://static.even3.com/idvisual/logos/png/e=
+ven3.png"
+                       height=3D"22"
+                       border=3D"0"
+                       alt=3D"Even3"
+                       style=3D"height:22px;" />
+                </a>
+
+            </td>
+            <td width=3D"66%"
+                valign=3D"middle"
+                style=3D"
+
+                  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+                    text-align: right;
+                    padding-top: 12px;
+                    vertical-align: middle;">
+              <div class=3D"header_defer no_text_resize"
+                   style=3D"
+=09=09=09=09=09=09=09=09=09=09-moz-text-size-adjust: none;
+                    -webkit-text-size-adjust: none;
+                    -ms-text-size-adjust: none;
+                    text-size-adjust: none;">
+                <a style=3D"
+
+                    text-decoration: none;
+=09=09=09=09=09=09=09=09=09=09color: #0f90ba;
+=09=09=09=09=09=09=09=09=09=09font-family: 'Open Sans', -apple-system, Blin=
+kMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue', Helvetica, Tahom=
+a, Arial, sans-serif;
+=09=09=09=09=09=09=09=09=09=09font-size:13px;
+=09=09=09=09=09=09=09=09=09=09font-weight:500;
+=09=09=09=09=09=09=09=09=09=09color:#aaa;
+=09=09=09=09=09=09=09=09=09=09text-decoration:none;"
+                   href=3D"https://www.even3.com.br/eventos"
+                   class=3D"">Procurar eventos</a>
+                  <a style=3D"
+
+                    text-decoration: none;
+=09=09=09=09=09=09=09=09=09=09color: #0f90ba;
+=09=09=09=09=09=09=09=09=09=09font-family: 'Open Sans', -apple-system, Blin=
+kMacSystemFont, Roboto,
+=09=09=09=09=09=09=09=09=09=09=09'Helvetica neue', Helvetica, Tahoma, Arial=
+, sans-serif;
+=09=09=09=09=09=09=09=09=09=09font-size:13px;
+=09=09=09=09=09=09=09=09=09=09font-weight:500;
+=09=09=09=09=09=09=09=09=09=09color:#aaa;
+=09=09=09=09=09=09=09=09=09=09text-decoration:none;
+=09=09=09=09=09=09=09=09=09=09padding-left: 20px;"
+                     href=3D"https://www.even3.com.br/participante/inscrica=
+o/"
+                     class=3D"">Minhas inscri&#231;&#245;es</a>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table class=3D"content"
+                   align=3D"center"
+                   cellpadding=3D"0"
+                   cellspacing=3D"0"
+                   border=3D"0"
+                   bgcolor=3D"#F7F7F7"
+                   style=3D"
+=09=09=09=09=09=09=09=09width: 600px;
+=09=09=09=09=09=09=09=09max-width: 600px;">
+              <tr>
+                <td colspan=3D"2"
+                    style=3D"
+=09=09=09=09=09=09=09=09=09background: #fff;
+=09=09=09=09=09=09=09=09=09border-radius: 8px;">
+                  <table border=3D"0"
+                         cellpadding=3D"0"
+                         cellspacing=3D"0"
+                         width=3D"100%">
+                    <tr>
+                      <td style=3D"
+
+                        font-family: 'Helvetica Neue', Helvetica, Arial, sa=
+ns-serif;">
+                        <style>
+                          @media (max-device-width: 640px) {
+                            .organized_by {
+                              font-size: 14px !important;
+                            }
+
+                            .ticket-section__or {
+                              padding: 12px 0 14px 0 !important;
+                            }
+
+                            .your-account__logo {
+                              margin-top: 8px;
+                            }
+                          }
+
+                          @media screen and (min-device-height:480px) and (=
+max-device-height:568px) {
+                            h2 {
+                              font-weight: 600 !important;
+                            }
+
+                            .header_defer {
+                              font-size: 12px;
+                            }
+                          }
+                        </style>
+                      </td>
+                    </tr>
+                    <tr class=3D"">
+                      <td class=3D"grid__col"
+                          style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans', -apple-syst=
+em, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue', Helvetica,=
+ Tahoma, Arial, sans-serif;
+=09=09=09=09=09=09=09=09=09=09=09=09padding: 32px 40px;
+=09=09=09=09=09=09=09=09=09=09=09=09border-radius:6px 6px 0 0;
+=09=09=09=09=09=09=09=09=09=09=09=09text-align: center;"
+                          align=3D"">
+                        <h2 style=3D"
+
+                          color: #404040;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-weight: 300;
+=09=09=09=09=09=09=09=09=09=09=09=09=09margin: 0 0 12px 0;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 24px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09line-height: 30px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans', -apple-s=
+ystem, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue', Helveti=
+ca, Tahoma, Arial, sans-serif; "
+                            class=3D"">
+                          Ol&#225;! Aqui est&#225; a confirma&#231;&#227;o =
+de inscri&#231;&#227;o
+                          <br />
+                          <a href=3D"https://www.even3.com.br/SIEES-608071"
+                             style=3D"text-decoration: none;
+=09=09=09=09=09=09=09=09=09=09=09=09=09color: #1090ba;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-weight:normal;">Simp&#243;sio I=
+nternacional de Educa&#231;&#227;o do Ensino Superior: Intelig&#234;ncia ar=
+tificial e ensino superior</a>
+                        </h2>
+                      </td>
+                    </tr>
+                   =20
+                    <tr>
+                      <td style=3D"padding: 0 40px;">
+                        <table cellspacing=3D"0"
+                               cellpadding=3D"0"
+                               width=3D"100%"
+                               style=3D"width: 100%; min-width: 100%;"
+                               class=3D"">
+                          <tr>
+                            <td style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09background-color: #dedede;
+=09=09=09=09=09=09=09=09=09=09=09=09=09width: 100%;
+=09=09=09=09=09=09=09=09=09=09=09=09=09min-width: 100%;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 1px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09height: 1px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09line-height: 1px;"
+                                class=3D"">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                   =20
+                      <tr class=3D"">
+                        <td style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans', -appl=
+e-system, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue', Helv=
+etica, Tahoma, Arial, sans-serif;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09padding: 10px 40px;">
+                          <table cellpadding=3D"0"
+                                 cellspacing=3D"0"
+                                 border=3D"0"
+                                 align=3D"left"
+                                 style=3D"width:100%; text-align:center; ov=
+erflow:hidden;">
+                            <tr>
+                                <td style=3D"width:50px; padding-right:20px=
+;">
+                                  <img src=3D"https://www.even3.com.br/qrco=
+de/index/?content=3D63195131&amp;width=3D345&amp;height=3D345"
+                                       title=3D'ingresso para dispositivos =
+m=C3=B3veis'
+                                       alt=3D'ingresso para dispositivos m=
+=C3=B3veis'
+                                       style=3D'width:120px; height:120px; =
+padding-right:20px;'
+                                       border=3D"0"
+                                       width=3D'120'
+                                       height=3D'120'
+                                       class=3D"" />
+                                </td>
+                              <td style=3D"text-align:left;">
+                                <b style=3D"font-size:18px;">William Josu&#=
+233; Da Silva Perim</b>
+                                <br />
+                                Inscri&#231;&#227;o n=C2=BA 63195131
+                                <br />
+                                Categoria Estudante
+                                <br />
+
+                                <a style=3D"color:white" href=3D"https://ww=
+w.even3.com.br/participante/impressao/impressaoentrada/?token=3Drke9RgJS1V5=
+htYf4IFlnCA%3d%3d">
+                                  <span style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09margin-top: 7px=
+;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09background-colo=
+r: rgb(68, 199, 103);
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09border-radius: =
+4px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09border: 1px sol=
+id rgb(24, 171, 41);
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09display: inline=
+-block;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09cursor: pointer=
+;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09color: rgb(255,=
+ 255, 255);
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: Ar=
+ial;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 14px=
+;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09padding: 5px 13=
+px;
+                                        margin-right:5px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09text-decoration=
+: none;">
+                                    Comprovante
+                                  </span>
+                                </a>
+                                &nbsp; &nbsp;
+                                  <a style=3D"color:white" href=3D"https://=
+www.even3.com.br/ticket?token=3Drke9RgJS1V5htYf4IFlnCA%3d%3d">
+                                    <span style=3D"
+                                        margin-top: 7px;
+                                        background-color: rgb(68, 199, 103)=
+;
+                                        border-radius: 4px;
+                                        border: 1px solid rgb(24, 171, 41);
+                                        display: inline-block;
+                                        cursor: pointer;
+                                        color: rgb(255, 255, 255);
+                                        font-family: Arial;
+                                        font-size: 14px;
+                                        padding: 5px 13px;
+                                        text-decoration: none;">
+                                      Salvar no smartphone
+                                    </span>
+                                  </a>
+
+
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style=3D"padding: 0 40px;">
+                          <table cellspacing=3D"0"
+                                 cellpadding=3D"0"
+                                 width=3D"100%"
+                                 style=3D"width: 100%; min-width: 100%;"
+                                 class=3D"">
+                            <tr>
+                              <td style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09background-color: #dedede;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09width: 100%;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09min-width: 100%;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 1px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09height: 1px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09line-height: 1px;"
+                                  class=3D"">
+                                &nbsp;
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                                                              <tr class=3D"=
+">
+                        <td class=3D"grid__col"
+                            style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans', -apple-syst=
+em, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue', Helvetica,=
+ Tahoma, Arial, sans-serif;
+=09=09=09=09=09=09=09=09=09=09=09=09padding: 32px 40px;
+=09=09=09=09=09=09=09=09=09=09=09=09text-align:center;">
+                         =20
+                          <table width=3D100% cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"" class=3D"">
+                            <tr width=3D"100%">
+                              <td width=3D"100%" style=3D"" class=3D"">
+                                  <div style=3D"color:#666666;font-weight:4=
+00;font-size: 14px;line-height:18px;font-family:'Benton Sans',-apple-system=
+,BlinkMacSystemFont,Roboto,'Helvetica neue',Helvetica,Tahoma,Arial,sans-ser=
+if;text-align: LEFT;">
+                                    <p>Ol=C3=A1!</p><p>Bem vindo ao futuro =
+da educa=C3=A7=C3=A3o superior.</p><p>Obrigado por se inscrever no<b> III S=
+imp=C3=B3sio Internacional de Educa=C3=A7=C3=A3o do Ensino Superior </b>(SI=
+EES): Intelig=C3=AAncia Artificial e Ensino Superior.</p><p>Desejamos um ex=
+celente evento!</p><p><br></p><p>Realiza=C3=A7=C3=A3o: Instituto Sumar=C3=
+=A9</p>
+                                  </div>
+                                                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style=3D"padding:0 40px">
+                          <table cellspacing=3D"0" cellpadding=3D"0" width=
+=3D"100%" style=3D"width:100%;min-width:100%">
+                            <tbody>
+                              <tr>
+                                <td style=3D"background-color:#dedede;width=
+:100%;min-width:100%;font-size:1px;height:1px;line-height:1px">
+                                  &nbsp;
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                                          <tr class=3D"">
+                        <td class=3D"grid__col"
+                            style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans', -apple-syst=
+em, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue', Helvetica,=
+ Tahoma, Arial, sans-serif;
+=09=09=09=09=09=09=09=09=09=09=09=09padding: 32px 40px;
+=09=09=09=09=09=09=09=09=09=09=09=09text-align:center;">
+                          <h2 style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09color: #404040;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-weight: 300;
+=09=09=09=09=09=09=09=09=09=09=09=09=09margin: 0 0 12px 0;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 24px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09line-height: 30px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans', -apple-s=
+ystem, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue', Helveti=
+ca, Tahoma, Arial, sans-serif;"
+                              class=3D"">
+                            Transmiss&#227;o online
+                          </h2>
+                          <table width=3D100% cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"" class=3D"">
+                            <tr width=3D"100%">
+                              <td width=3D"100%" style=3D"" class=3D"">
+                                <div style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09color: #666666;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-weight: 400;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 13px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09line-height: 18px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans',=
+ -apple-system, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue'=
+, Helvetica, Tahoma, Arial, sans-serif;"
+                                     class=3D"">
+                                  Acesse seu evento online clicando no bot&=
+#227;o abaixo. <br />
+                                  Este &#233; seu link &#250;nico e exclusi=
+vo de acesso ao evento.
+
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                          <table cellpadding=3D"0"
+                                 cellspacing=3D"0"
+                                 border=3D"0"
+                                 align=3D"left"
+                                 style=3D"width:100%; margin-top: 20px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09text-align:center;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09overflow:hidden;">
+                            <tr>
+                              <td>
+                                <a href=3D"https://www.even3.com.br/streami=
+ng/join?type=3Dindividual&amp;user=3Dwillianjosueh%40gmail.com&amp;auth=3DZ=
+KFYODnvWiS-2OmRpSEDtC3HDUMfH9twzqg5xl4jyqv3XaCGsyL-VCXdKZU8qShUqToRRDygi7xB=
+i40Tsh5aLiIMJkalSVR-gIhxc9Mh585nqQZAhvD4cxK92S1DDPN88vnUVC8Mo2AIjM54Y2Bjj7p=
+qBbSTUBPH-KQ9XbvOx1BhHQYtGur5enYQuolulcQyxoatQ5417mNsN9h0R7vkdVisvGipHtT9Ef=
+jx3yEoPkmPuwgln8WzkF1ArmCtGQhlMG9D34iG__VEfn6ddo-nqodHobMQFuRfUWpDQtSlgRApc=
+tMuSkoW6obVebshyaWJ">
+                                  <span style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09border-radius: =
+4px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09border: 1px sol=
+id #1090ba;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09display: inline=
+-block;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09cursor: pointer=
+;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: Ar=
+ial;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 14px=
+;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09padding: 5px 13=
+px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09text-decoration=
+: none;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09color: #1090ba;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09background-colo=
+r: transparent;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09background-imag=
+e: none;">
+                                    Acesse agora
+                                  </span>
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style=3D"padding: 0 40px;">
+                          <table cellspacing=3D"0"
+                                 cellpadding=3D"0"
+                                 width=3D"100%"
+                                 style=3D"width: 100%; min-width: 100%;"
+                                 class=3D"">
+                            <tr>
+                              <td style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09background-color: #dedede;
+=09=09=09=09=09=09=09=09=09=09=09=09=09width: 100%;
+=09=09=09=09=09=09=09=09=09=09=09=09=09min-width: 100%;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 1px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09height: 1px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09line-height: 1px;"
+                                  class=3D"">
+                                &nbsp;
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                                          <tr class=3D"">
+                        <td class=3D"grid__col"
+                            style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans', -apple-syst=
+em, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue', Helvetica,=
+ Tahoma, Arial, sans-serif;
+=09=09=09=09=09=09=09=09=09=09=09=09padding: 32px 40px;
+=09=09=09=09=09=09=09=09=09=09=09=09text-align:center;">
+                          <h2 style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09color: #404040;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-weight: 300;
+=09=09=09=09=09=09=09=09=09=09=09=09=09margin: 0 0 12px 0;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 24px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09line-height: 30px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans', -apple-s=
+ystem, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue', Helveti=
+ca, Tahoma, Arial, sans-serif;"
+                              class=3D"">
+Atividades &amp; Submiss&#245;es
+                          </h2>
+                          <table width=3D100% cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"" class=3D"">
+                            <tr width=3D"100%">
+                              <td width=3D"100%" style=3D"" class=3D"">
+                                <div style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09color: #666666;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-weight: 400;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 13px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09line-height: 18px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans',=
+ -apple-system, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue'=
+, Helvetica, Tahoma, Arial, sans-serif;"
+                                     class=3D"">
+Para se cadastrar nas atividades do evento e realizar submiss&#227;o, acess=
+e a sua conta.                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                          <table cellpadding=3D"0"
+                                 cellspacing=3D"0"
+                                 border=3D"0"
+                                 align=3D"left"
+                                 style=3D"width:100%; margin-top: 20px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09text-align:center;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09overflow:hidden;">
+                            <tr>
+                              <td>
+                                <a href=3D"https://www.even3.com.br/evento/=
+login/?evento=3DSIEES-608071&amp;ReturnUrl=3D/participante/home/&amp;b=3D2"=
+>
+                                  <span style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09border-radius: =
+4px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09border: 1px sol=
+id #1090ba;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09display: inline=
+-block;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09cursor: pointer=
+;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: Ar=
+ial;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 14px=
+;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09padding: 5px 13=
+px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09text-decoration=
+: none;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09color: #1090ba;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09background-colo=
+r: transparent;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09background-imag=
+e: none;">
+Acesse agora                                  </span>
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style=3D"padding: 0 40px;">
+                          <table cellspacing=3D"0"
+                                 cellpadding=3D"0"
+                                 width=3D"100%"
+                                 style=3D"width: 100%; min-width: 100%;"
+                                 class=3D"">
+                            <tr>
+                              <td style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09background-color: #dedede;
+=09=09=09=09=09=09=09=09=09=09=09=09=09width: 100%;
+=09=09=09=09=09=09=09=09=09=09=09=09=09min-width: 100%;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 1px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09height: 1px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09line-height: 1px;"
+                                  class=3D"">
+                                &nbsp;
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                                          <tr class=3D"">
+                        <td class=3D"grid__col"
+                            style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans', -apple-syst=
+em, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue', Helvetica,=
+ Tahoma, Arial, sans-serif;
+=09=09=09=09=09=09=09=09=09=09=09=09padding: 32px 40px;
+=09=09=09=09=09=09=09=09=09=09=09=09text-align:center;">
+                          <h2 style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09color: #404040;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-weight: 300;
+=09=09=09=09=09=09=09=09=09=09=09=09=09margin: 0 0 12px 0;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 24px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09line-height: 30px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans', -apple-s=
+ystem, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue', Helveti=
+ca, Tahoma, Arial, sans-serif;"
+                              class=3D"">
+                            D&#250;vidas sobre este evento?
+                          </h2>
+                          <table width=3D100% cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"" class=3D"">
+                            <tr width=3D"100%">
+                              <td width=3D"100%" style=3D"" class=3D"">
+                                <div style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09color: #666666;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-weight: 400;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 13px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09line-height: 18px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans',=
+ -apple-system, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue'=
+, Helvetica, Tahoma, Arial, sans-serif;"
+                                     class=3D"">
+                                  <a href=3D"https://www.even3.com.br/event=
+o/login?ReturnUrl=3D%2fparticipante%2fcontato%2forganizador"
+                                     style=3D'
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09text-decoration: none;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09color: #1090ba;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-weight:normal;'>Entrar=
+ em contato com o organizador</a>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                                          <tr>
+                        <td class=3D"table__ridge table__ridge--top">
+                          <img src=3D"https://static.even3.com/assets/email=
+/lista-cima.jpg"
+                               alt=3D"Even3"
+                               height=3D"7"
+                               style=3D"height:7px; border:none; display:bl=
+ock;" border=3D"0" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"grid__col"
+                            style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans', -appl=
+e-system, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue', Helv=
+etica, Tahoma, Arial, sans-serif;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09padding: 32px 40px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09background-color: #ededed;">
+                          <table cellpadding=3D"0"
+                                 cellspacing=3D"0"
+                                 border=3D"0"
+                                 style=3D"width: 100%; margin-bottom: 12px;=
+"
+                                 class=3D"no_text_resize">
+                            <tr>
+                              <td style=3D"border-bottom: 1px dashed #d3d3d=
+3;">
+                                <h2 style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09color: #404040;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-weight: 300;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09margin: 0 0 12px 0;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 24px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09line-height: 30px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton =
+Sans', -apple-system, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica=
+ neue', Helvetica, Tahoma, Arial, sans-serif;"
+                                    class=3D"">
+                                  Resumo
+                                </h2>
+                              </td>
+                              <td colspan=3D"2"
+                                  style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09text-align: right;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09border-bottom: 1px dashe=
+d #d3d3d3;">
+                                <div style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09color: #666666;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-weight: 400;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 13px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09line-height: 18px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton =
+Sans', -apple-system, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica=
+ neue', Helvetica, Tahoma, Arial, sans-serif;"
+                                     class=3D"">
+                                  segunda-feira, 25 de agosto de 2025
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan=3D"3">
+                                <table cellpadding=3D"0"
+                                       cellspacing=3D"0"
+                                       border=3D"0"
+                                       style=3D"width: 100%;">
+                                  <thead>
+                                    <tr>
+                                      <th style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09border-botto=
+m: 1px dashed #d3d3d3;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09text-align: =
+left;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09padding-bott=
+om: 12px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09padding-righ=
+t: 12px">
+                                        <div style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09color: #6=
+66666;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-weig=
+ht: 400;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-size=
+: 15px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09line-heig=
+ht: 21px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-fami=
+ly: 'Benton Sans', -apple-system,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09BlinkM=
+acSystemFont, Roboto, 'Helvetica neue', Helvetica,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Tahoma=
+, Arial, sans-serif;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-weig=
+ht: 500;"
+                                             class=3D"">
+                                          Item
+                                        </div>
+                                      </th>
+                                      <th style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09border-botto=
+m: 1px dashed #d3d3d3;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09text-align: =
+right;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09padding-bott=
+om: 12px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09padding-righ=
+t: 12px">
+                                        <div style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09color: #6=
+66666;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-weig=
+ht: 400;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-size=
+: 15px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09line-heig=
+ht: 21px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-fami=
+ly: 'Benton Sans', -apple-system,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09BlinkM=
+acSystemFont, Roboto, 'Helvetica neue', Helvetica,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Tahoma=
+, Arial, sans-serif;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-weig=
+ht: 500;"
+                                             class=3D"">
+                                          Quantidade
+                                        </div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                        <td style=3D"text-align: left; padd=
+ing: 12px 0; padding-right:3px">
+
+                                          <div style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=
+color: #666666;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-weig=
+ht: 400;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 15px=
+;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09line-height: 21=
+px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'B=
+enton Sans', -apple-system,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09BlinkM=
+acSystemFont, Roboto, 'Helvetica neue',
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Helvet=
+ica, Tahoma, Arial, sans-serif;"
+                                               class=3D"">
+                                            Estudante
+                                          </div>
+                                        </td>
+                                        <td style=3D"text-align: right; pad=
+ding: 12px 0; ">
+                                          <div style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09color: #6=
+66666;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-weig=
+ht: 400;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-size=
+: 15px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09line-heig=
+ht: 21px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-fami=
+ly: 'Benton Sans', -apple-system,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09BlinkM=
+acSystemFont, Roboto, 'Helvetica neue',
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Helvet=
+ica, Tahoma, Arial, sans-serif;"
+                                               class=3D"">
+                                            1
+                                          </div>
+                                        </td>
+                                      </tr>
+                                                                      </tbo=
+dy>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class=3D"table__ridge table__ridge--bottom">
+                          <img src=3D"https://static.even3.com/assets/email=
+/listra-baixo.jpg"
+                               alt=3D"Even3"
+                               height=3D"7"
+                               style=3D"height:7px;border:none; display:blo=
+ck;" border=3D"0" />
+                        </td>
+                      </tr>
+                   =20
+                    <tr class=3D"">
+                      <td class=3D"grid__col"
+                          style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans', -appl=
+e-system, BlinkMacSystemFont, Roboto,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09'Helvetica neue', Helvetica, T=
+ahoma, Arial, sans-serif;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09padding: 32px 40px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09border-radius:0 0 6px 6px;"
+                          align=3D"">
+                        <table cellpadding=3D"0"
+                               cellspacing=3D"0"
+                               border=3D"0"
+                               align=3D"left"
+                               style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09width:330px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09line-height:1.67;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-size:13px;"
+                               class=3D"small_full_width ">
+                          <tr>
+                            <td>
+                              <h2 style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09color: #404040;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-weight: 300;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09margin: 0 0 12px 0;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-size: 24px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09line-height: 30px;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton =
+Sans', -apple-system, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica=
+ neue', Helvetica, Tahoma, Arial, sans-serif;"
+                                  class=3D"">
+                                Sobre este evento
+                              </h2>
+                              <table cellspacing=3D"0"
+                                     cellpadding=3D"0"
+                                     width=3D'100%'
+                                     style=3D'' align=3D'' class=3D"">
+                                <tr style=3D'' class=3D''>
+                                  <td width=3D'20'
+                                      height=3D''
+                                      style=3D'vertical-align:top; padding-=
+right:10px;'
+                                      align=3D'' valign=3D'' class=3D'' col=
+span=3D'1'>
+                                    <img src=3D'https://static.even3.com/as=
+sets/email/data.png'
+                                         title=3D'data'
+                                         alt=3D'data'
+                                         style=3D'width:20px; height:20px; =
+vertical-align:-2px;'
+                                         border=3D"0" width=3D'20' height=
+=3D'20' class=3D"" />
+                                  </td>
+                                  <td width=3D'' height=3D'' style=3D'' ali=
+gn=3D'' valign=3D'' class=3D'' colspan=3D'1'>
+                                    <div style=3D"color: #666666; font-weig=
+ht: 400; font-size: 15px; line-height: 21px; font-family: 'Benton Sans', -a=
+pple-system, BlinkMacSystemFont, Roboto, 'Helvetica neue', Helvetica, Tahom=
+a, Arial, sans-serif; " class=3D"">
+                                      segunda-feira, 25 de agosto de 2025
+
+                                        <span>at&#233;</span>
+                                        <br />
+                                        <span>sexta-feira, 29 de agosto de =
+2025</span>
+
+                                        <br />
+                                        <span>19:00 - 22:00</span>
+                                      <br /><br />
+                                    </div>
+                                  </td>
+                                </tr>
+
+                                  <tr style=3D'' class=3D''>
+                                    <td width=3D'20' height=3D'' style=3D'v=
+ertical-align:top; padding-right:10px;' align=3D'' valign=3D'' class=3D'' c=
+olspan=3D'1'>
+                                      <img src=3D'https://static.even3.com/=
+assets/email/local.png' title=3D'data' alt=3D'data' style=3D'width:20px; he=
+ight:20px; vertical-align:-4px;' border=3D"0" width=3D'20' height=3D'20' cl=
+ass=3D"" />
+                                    </td>
+                                    <td width=3D'' height=3D'' style=3D'pad=
+ding-bottom:10px;' align=3D'' valign=3D'' class=3D'' colspan=3D'1'>
+                                      <div style=3D"color: #666666; font-we=
+ight: 400; font-size: 15px; line-height: 21px; font-family: 'Benton Sans', =
+-apple-system, BlinkMacSystemFont, Roboto, 'Helvetica neue', Helvetica, Tah=
+oma, Arial, sans-serif; " class=3D"">
+                                        <a href=3D"https://www.google.com/m=
+aps/?q=3D-15.7975154,-47.8918874"
+                                           title=3D"Clique para ver a local=
+iza=C3=A7=C3=A3o"
+                                           name=3D"Clique para ver a locali=
+za=C3=A7=C3=A3o">
+                                          Bras&#237;lia
+                                        </a>
+                                      </div>
+                                    </td>
+                                  </tr>
+
+
+                                <tr style=3D'' class=3D'hide-for-small'>
+                                  <td width=3D'20' height=3D'' style=3D'ver=
+tical-align:top; padding-right:10px; padding-top:10px;' align=3D'' valign=
+=3D'' class=3D'hide-for-small' colspan=3D'1'>
+                                    <img src=3D'https://static.even3.com/as=
+sets/email/calendario.png' title=3D'data' alt=3D'data' style=3D'width:20px;=
+ height:20px; vertical-align:-2px;' border=3D"0" width=3D'20' height=3D'20'=
+ class=3D"" />
+                                  </td>
+                                  <td width=3D'' height=3D'' style=3D'paddi=
+ng-top:10px;' align=3D'' valign=3D'' class=3D'hide-for-small' colspan=3D'1'=
+>
+                                    <div style=3D"color: #666666; font-weig=
+ht: 400; font-size: 15px; line-height: 21px; font-family: 'Benton Sans', -a=
+pple-system, BlinkMacSystemFont, Roboto, 'Helvetica neue', Helvetica, Tahom=
+a, Arial, sans-serif; " class=3D"">
+                                      Adicionar ao calend&#225;rio:
+                                    </div>
+                                    <div style=3D"color: #666666; font-weig=
+ht: 400; font-size: 15px; line-height: 21px; font-family: 'Benton Sans', -a=
+pple-system, BlinkMacSystemFont, Roboto, 'Helvetica neue', Helvetica, Tahom=
+a, Arial, sans-serif; margin-top:6px; margin-bottom:0;" class=3D"no_text_re=
+size">
+                                      <a style=3D"text-decoration: none; co=
+lor: #0f90ba; font-family: 'Benton Sans', -apple-system, BlinkMacSystemFont=
+, Roboto, 'Helvetica neue', Helvetica, Tahoma, Arial, sans-serif; " href=3D=
+"https://www.even3.com.br/addtocalendar/?urlevent=3DSIEES-608071&amp;calend=
+ar=3Dgoogle&amp;tk=3DZKFYODnvWiS-2OmRpSEDtC3HDUMfH9twzqg5xl4jyqv3XaCGsyL-VC=
+XdKZU8qShUqToRRDygi7xBi40Tsh5aLiIMJkalSVR-gIhxc9Mh585nqQZAhvD4cxK92S1DDPN88=
+vnUVC8Mo2AIjM54Y2Bjj7pqBbSTUBPH-KQ9XbvOx1BhHQYtGur5enYQuolulcQyxoatQ5417mNs=
+N9h0R7vkdVisvGipHtT9Efjx3yEoPkmPuwgln8WzkF1ArmCtGQhlMG9D34iG__VEfn6ddo-nqod=
+HobMQFuRfUWpDQtSlgRApctMuSkoW6obVebshyaWJ"
+                                         class=3D"">Google</a>
+                                      <span style=3D'margin:0 8px;' class=
+=3D''>&middot;</span>
+                                      <a style=3D"text-decoration: none; co=
+lor: #0f90ba; font-family: 'Benton Sans', -apple-system, BlinkMacSystemFont=
+, Roboto, 'Helvetica neue', Helvetica, Tahoma, Arial, sans-serif; " href=3D=
+"https://www.even3.com.br/addtocalendar/?urlevent=3DSIEES-608071&amp;calend=
+ar=3Doutlook&amp;tk=3DZKFYODnvWiS-2OmRpSEDtC3HDUMfH9twzqg5xl4jyqv3XaCGsyL-V=
+CXdKZU8qShUqToRRDygi7xBi40Tsh5aLiIMJkalSVR-gIhxc9Mh585nqQZAhvD4cxK92S1DDPN8=
+8vnUVC8Mo2AIjM54Y2Bjj7pqBbSTUBPH-KQ9XbvOx1BhHQYtGur5enYQuolulcQyxoatQ5417mN=
+sN9h0R7vkdVisvGipHtT9Efjx3yEoPkmPuwgln8WzkF1ArmCtGQhlMG9D34iG__VEfn6ddo-nqo=
+dHobMQFuRfUWpDQtSlgRApctMuSkoW6obVebshyaWJ"
+                                         class=3D"">Outlook</a>
+                                      <span style=3D'margin:0 8px;' class=
+=3D''>&middot;</span>
+                                      <a style=3D"text-decoration: none; co=
+lor: #0f90ba; font-family: 'Benton Sans', -apple-system, BlinkMacSystemFont=
+, Roboto, 'Helvetica neue', Helvetica, Tahoma, Arial, sans-serif; " href=3D=
+"https://www.even3.com.br/addtocalendar/?urlevent=3DSIEES-608071&amp;calend=
+ar=3Dical&amp;tk=3DZKFYODnvWiS-2OmRpSEDtC3HDUMfH9twzqg5xl4jyqv3XaCGsyL-VCXd=
+KZU8qShUqToRRDygi7xBi40Tsh5aLiIMJkalSVR-gIhxc9Mh585nqQZAhvD4cxK92S1DDPN88vn=
+UVC8Mo2AIjM54Y2Bjj7pqBbSTUBPH-KQ9XbvOx1BhHQYtGur5enYQuolulcQyxoatQ5417mNsN9=
+h0R7vkdVisvGipHtT9Efjx3yEoPkmPuwgln8WzkF1ArmCtGQhlMG9D34iG__VEfn6ddo-nqodHo=
+bMQFuRfUWpDQtSlgRApctMuSkoW6obVebshyaWJ"
+                                         class=3D"">iCal</a>
+                                      <span style=3D'margin:0 8px;' class=
+=3D''>&middot;</span>
+                                      <a style=3D"text-decoration: none; co=
+lor: #0f90ba; font-family: 'Benton Sans', -apple-system, BlinkMacSystemFont=
+, Roboto, 'Helvetica neue', Helvetica, Tahoma, Arial, sans-serif; " href=3D=
+"https://www.even3.com.br/addtocalendar/?urlevent=3DSIEES-608071&amp;calend=
+ar=3Dyahoo&amp;tk=3DZKFYODnvWiS-2OmRpSEDtC3HDUMfH9twzqg5xl4jyqv3XaCGsyL-VCX=
+dKZU8qShUqToRRDygi7xBi40Tsh5aLiIMJkalSVR-gIhxc9Mh585nqQZAhvD4cxK92S1DDPN88v=
+nUVC8Mo2AIjM54Y2Bjj7pqBbSTUBPH-KQ9XbvOx1BhHQYtGur5enYQuolulcQyxoatQ5417mNsN=
+9h0R7vkdVisvGipHtT9Efjx3yEoPkmPuwgln8WzkF1ArmCtGQhlMG9D34iG__VEfn6ddo-nqodH=
+obMQFuRfUWpDQtSlgRApctMuSkoW6obVebshyaWJ"
+                                         class=3D"">Yahoo</a>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                       =20
+                      </td>
+                    </tr>
+
+                   =20
+                      <tr>
+                        <td style=3D"padding: 0 40px;">
+
+                          <table cellspacing=3D"0" cellpadding=3D"0" width=
+=3D"100%" style=3D"width: 100%; min-width: 100%;" class=3D"">
+                            <tr>
+                              <td style=3D"background-color: #dedede; width=
+: 100%; min-width: 100%; font-size: 1px; height: 1px; line-height: 1px; " c=
+lass=3D"">
+                                &nbsp;
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr class=3D"">
+                        <td class=3D"grid__col" style=3D"font-family: 'Bent=
+on Sans', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica neue', Helv=
+etica, Tahoma, Arial, sans-serif; padding: 32px 40px; border-radius:0 0 6px=
+ 6px;" align=3D"">
+                          <table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" align=3D"left" style=3D"width:168px; text-align:center;" class=3D"sm=
+all_full_width your-account__logo">
+                            <tr>
+                              <td>
+                                <a style=3D"text-decoration: none; color: #=
+0f90ba; font-family: 'Benton Sans', -apple-system, BlinkMacSystemFont, Robo=
+to, 'Helvetica neue', Helvetica, Tahoma, Arial, sans-serif; " href=3D"https=
+://www.even3.com.br/evento/login/?evento=3DSIEES-608071"
+                                   class=3D"">
+                                  <img src=3D'https://static.even3.com/asse=
+ts/email/conta2.png' title=3D'sua conta' alt=3D'sua conta' style=3D'width:1=
+57px; height:94px; ' border=3D"0" width=3D'157' height=3D'94' class=3D"" />
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                          <table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" align=3D"right" style=3D"width:340px;" class=3D"small_full_width ">
+                            <tr>
+                              <td>
+                                <h2 style=3D"color: #404040; font-weight: 3=
+00; margin: 0 0 12px 0; font-size: 24px; line-height: 30px; font-family: 'B=
+enton Sans', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica neue', H=
+elvetica, Tahoma, Arial, sans-serif; margin-bottom:8px;" class=3D"">
+                                  Crie uma conta
+                                </h2>
+                                <div style=3D"color: #666666; font-weight: =
+400; font-size: 15px; line-height: 21px; font-family: 'Benton Sans', -apple=
+-system, BlinkMacSystemFont, Roboto, 'Helvetica neue', Helvetica, Tahoma, A=
+rial, sans-serif; font-weight: 300; font-size:14px; line-height:1.5;"
+                                     class=3D"">
+Com uma conta &#233; poss&#237;vel ter acesso ao seu hist&#243;rico de pedi=
+dos, comprovantes, certificados e mais. <a href=3D"https://www.even3.com.br=
+/cadastro/?n=3DWilliam+Josu%c3%a9+Da+Silva+Perim&amp;e=3Dwillianjosueh%40gm=
+ail.com&amp;b=3D1" style=3D"text-decoration: none; color: #1090ba; font-wei=
+ght:normal;">Crie agora</a> sua conta<span>.</span>
+                                  Caso desejar, voc&#234; pode <a href=3D"h=
+ttps://www.even3.com.br/evento/login/?evento=3DSIEES-608071&amp;ReturnUrl=
+=3D/participante/inscricao/&amp;b=3D1" style=3D"text-decoration: none; colo=
+r: #1090ba; font-weight:normal;">cancelar sua inscri&#231;&#227;o</a> a qua=
+lquer momento<span>.</span>
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <table class=3D"content"
+               align=3D"center"
+               cellpadding=3D"0"
+               cellspacing=3D"0"
+               border=3D"0"
+               style=3D"width: 600px;max-width: 600px;font-family: Helvetic=
+a, Arial, sans-serif;">
+          <tr class=3D"hide-for-small">
+            <td style=3D"padding-top: 24px;">
+              <table>
+                <tr class=3D"footer-attendee-cta">
+                  <td class=3D"grid__col"
+                      style=3D"
+=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans', -apple-system, Bl=
+inkMacSystemFont, Roboto,
+=09=09=09=09=09=09=09=09=09=09=09'Helvetica neue', Helvetica, Tahoma, Arial=
+, sans-serif;
+=09=09=09=09=09=09=09=09=09=09padding: 12px 20px;"
+                      align=3D"">
+                    <table cellspacing=3D"0"
+                           cellpadding=3D"0"
+                           width=3D'100%'
+                           style=3D''
+                           align=3D''
+                           class=3D"col-layout">
+                      <tr style=3D'' class=3D''>
+                        <td width=3D'50%'
+                            height=3D''
+                            style=3D''
+                            align=3D''
+                            valign=3D'top'
+                            class=3D'col-footer-cta'
+                            colspan=3D'1'>
+                          <table border=3D"0"
+                                 cellpadding=3D"0"
+                                 cellspacing=3D"0"
+                                 width=3D"100%">
+                            <tr class=3D"">
+                              <td class=3D"grid__col"
+                                  style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans',=
+ -apple-system, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue'=
+, Helvetica, Tahoma, Arial, sans-serif;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09padding: 0 28px 0 0; "
+                                  align=3D"">
+                                <table cellspacing=3D"0"
+                                       cellpadding=3D"0"
+                                       width=3D'100%'
+                                       style=3D''
+                                       align=3D''
+                                       class=3D"col-layout">
+                                  <tr style=3D'' class=3D''>
+                                    <td width=3D'75%'
+                                        height=3D''
+                                        style=3D'padding-right: 10px;'
+                                        align=3D''
+                                        valign=3D'middle'
+                                        class=3D'col-container'
+                                        colspan=3D'1'></td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td width=3D'1px'
+                            height=3D''
+                            style=3D'height: 100%; background: #dedede;'
+                            align=3D''
+                            valign=3D''
+                            class=3D'col_container'
+                            colspan=3D'1'>
+                          <table border=3D"0"
+                                 cellpadding=3D"0"
+                                 cellspacing=3D"0"
+                                 width=3D"100%"></table>
+                        </td>
+                        <td width=3D'50%'
+                            height=3D''
+                            style=3D''
+                            align=3D''
+                            valign=3D'top'
+                            class=3D'col-footer-cta'
+                            colspan=3D'1'>
+                          <table border=3D"0"
+                                 cellpadding=3D"0"
+                                 cellspacing=3D"0"
+                                 width=3D"100%">
+                            <tr class=3D"">
+                              <td class=3D"grid__col"
+                                  style=3D"
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09font-family: 'Benton Sans',=
+ -apple-system, BlinkMacSystemFont,
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Roboto, 'Helvetica neue'=
+, Helvetica, Tahoma, Arial, sans-serif;
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09padding: 0 0 0 28px;"
+                                  align=3D""></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style=3D"padding-top: 24px;">
+              <table cellspacing=3D"0"
+                     cellpadding=3D"0"
+                     width=3D"100%"
+                     style=3D"width: 100%; min-width: 100%;"
+                     class=3D"">
+                <tr>
+                  <td style=3D"
+=09=09=09=09=09=09=09=09=09=09=09background-color: #dedede;
+=09=09=09=09=09=09=09=09=09=09=09width: 100%;
+=09=09=09=09=09=09=09=09=09=09=09min-width: 100%;
+=09=09=09=09=09=09=09=09=09=09=09font-size: 1px;
+=09=09=09=09=09=09=09=09=09=09=09height: 1px;
+=09=09=09=09=09=09=09=09=09=09=09line-height: 1px;"
+                      class=3D"">
+                    &nbsp;
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style=3D"font:12px/18px helvetica;text-align:center;color:#=
+aaa;padding:20px 0px 20px 0px">
+              <p style=3D"color:#aaa;">
+                Esse e-mail foi enviado para <a href=3D"mailto:willianjosue=
+h@gmail.com" target=3D"_blank">willianjosueh@gmail.com</a>. Voc&#234; receb=
+eu esse e-mail pois est&#225; cadastrado na plataforma de eventos Even3.
+                Voc&#234; pode <a href=3D"https://us-east-1.user-subscripti=
+on.com/uw/38adeb23-51ca-4f3f-bf6d-bd422b9e2273/987fdbd4-df0a-4f9a-ab17-1ee1=
+e8643daf/01000198e3416386-258dde4c-1d34-49e8-99ef-f970d9e1c81f-000000" targ=
+et=3D"_blank">cancelar a inscri&#231;&#227;o</a> a qualquer momento.
+              </p>
+              <a href=3D"https://www.even3.com.br/empresa/politica-de-priva=
+cidade/" target=3D"_blank">Pol&#237;tica de privacidade</a>
+              <span style=3D"color:#aaa">|</span>
+              <a href=3D"https://termos-e-politicas.even3.com/category/even=
+3-eventos/" target=3D"_blank">Termos de uso</a>
+              <span style=3D"color:#aaa">|</span>
+              <a href=3D"https://ajuda.even3.com.br/hc/requests/new" target=
+=3D"_blank">Suporte</a>
+            </td>
+          </tr>
+         =20
+            <tr>
+              <td style=3D"font:10px/16px helvetica;text-align:center;color=
+:#aaa;padding:20px 0px 0px 0px">
+                <p>Even3 - L3 Solu=C3=A7=C3=B5es em tecnologia Ltda.<br /> =
+Rua do Brum, n=C2=BA 248, CXPST 020, Recife, Recife-PE, CEP: 50.030-260</p>
+              </td>
+            </tr>
+         =20
+        </table>
+        </table>
+
+        <div itemscope itemtype=3D"http://schema.org/EventReservation">
+          <meta itemprop=3D"reservationNumber" content=3D"63195131" />
+          <link itemprop=3D"reservationStatus" href=3D"http://schema.org/Co=
+nfirmed" />
+          <div itemprop=3D"underName" itemscope itemtype=3D"http://schema.o=
+rg/Person">
+            <meta itemprop=3D"name" content=3D"William Josu&#233; Da Silva =
+Perim" />
+          </div>
+          <div itemprop=3D"reservationFor" itemscope itemtype=3D"http://sch=
+ema.org/Event">
+            <meta itemprop=3D"name" content=3D"Simp&#243;sio Internacional =
+de Educa&#231;&#227;o do Ensino Superior: Intelig&#234;ncia artificial e en=
+sino superior" />
+            <div itemprop=3D"performer" itemscope itemtype=3D"http://schema=
+.org/Organization">
+              <meta itemprop=3D"name" content=3D"Simp&#243;sio Internaciona=
+l de Educa&#231;&#227;o do Ensino Superior: Intelig&#234;ncia artificial e =
+ensino superior" />
+              <link itemprop=3D"image" href=3D"https://images.even3.com/SuS=
+PuPLf_QdrW_hqf7bq8-TGb6Q=3D/fit-in/250x250/smart/https://static.even3.com/l=
+ogos/IMG_3539.9ed2b10d66634d90b85c.PNG" />
+            </div>
+            <meta itemprop=3D"startDate" content=3D"2025-08-25T12:00:00-03:=
+00" />
+            <div itemprop=3D"location" itemscope itemtype=3D"http://schema.=
+org/Place">
+              <meta itemprop=3D"name" content=3D"Bras&#237;lia" />
+              <div itemprop=3D"address" itemscope itemtype=3D"http://schema=
+.org/PostalAddress">
+                <meta itemprop=3D"streetAddress" content=3D"Bras&#237;lia" =
+/>
+                <meta itemprop=3D"addressLocality" content=3D"Distrito Fede=
+ral" />
+                <meta itemprop=3D"addressRegion" content=3D"Bras&#237;lia" =
+/>
+                <meta itemprop=3D"addressCountry" content=3D"BR" />
+              </div>
+            </div>
+          </div>
+          <meta itemprop=3D"ticketToken" content=3D"qrCode:63195131" />
+          <meta itemprop=3D"ticketNumber" content=3D"63195131" />
+        </div>
+
+      </body>
+    </html>
+------=_Part_131873_853926935.1756159370118--
